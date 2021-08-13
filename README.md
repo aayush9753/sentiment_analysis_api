@@ -5,8 +5,7 @@
 -  Visit [http://127.0.0.1:8000/](http://127.0.0.1:8000/docs) for the Swagger Documentation and the fast api which you can test there only.
 
 
-## Sample Outputs of FastApi
-Black and White Image             |  Colorized Image
+## Sample Outputs of FastApi    
 :-------------------------:|:-------------------------:
 ![](https://github.com/aayush9753/sentiment_analysis_api/blob/main/repo_images/output_example.jpg)
 
