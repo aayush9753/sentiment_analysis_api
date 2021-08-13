@@ -33,3 +33,6 @@
 - data_path => Path to the dataset
 - tokenizer_path => Path to the tokenizer
 - path_2_savde_model ==> path to the mode that will be used for prediction.
+
+### Swagger 
+![](https://github.com/aayush9753/sentiment_analysis_api/blob/main/repo_images/swagger.jpg)
