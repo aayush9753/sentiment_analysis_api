@@ -23,6 +23,7 @@
 - Then there exists other model parameters to set.
 - Now run the main.py file to train the model.
 - Model will be trained and various checkpoint will be save in the folder with a log file consisting of Training inpormation.
+- See the log file in **saved** to see my training information.
 
 ## Inference
 - Run the test_configs file and set the parameter for testing
