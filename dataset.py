@@ -64,14 +64,15 @@ class DataTraining():  # Dataset Class to load training data and tokenize them a
     
     def get_splitted_token_vectors(self, config):
         data = self.load_data(config)
-        data_positive = data[data["airline_sentiment"] == "positive"].reset_index(drop = True)
-        data_negative = data[data["airline_sentiment"] == "negative"].reset_index(drop = True)
+        data_positive = data[data["airline_sentiment"] == "positive"].reset_index(drop = True)  # taking all the positive data points
+        data_negative = data[data["airline_sentiment"] == "negative"].reset_index(drop = True)  # taking all the negative data points
         data = pd.concat([data_positive, data_negative[:len(data_positive)]], axis=0).sample(frac=1, random_state=config.random_state).reset_index(drop = True)
+        # Concatinating data_positive and truncated data_negative to deal with with data imbalance
         raw_texts = data["text"].values
         labels = self.label_to_idx(data["airline_sentiment"].values)
         X_train, X_val, y_train, y_val = train_test_split(raw_texts, labels, 
                                                         test_size=config.val_size,
-                                                        random_state=config.random_state, shuffle = True, stratify=labels)
+                                                        random_state=config.random_state, shuffle = True, stratify=labels)  # train - val split
         if config.default_tokenizer:
             tokenizer = self.load_tokenizer(config.tokenizer_path)
         else:
