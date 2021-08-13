@@ -11,6 +11,7 @@
 
 ## Training
 - Run the train_configs file and set the parameter for training
+-:-------------------------:|:-------------------------:
 ![](https://github.com/aayush9753/sentiment_analysis_api/blob/main/repo_images/train_configs.jpg)
 - data_path => Path to the dataset
 - val_size => Size of validation data to be used
